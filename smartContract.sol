@@ -4,12 +4,6 @@ pragma solidity ^0.8.0;
 
 contract Insurance {
 
-    address private owner;
-    int private petId; // make it into a map
-    mapping(address => uint[]) public pets; // pets of the owners
-    // key: ownerID
-    // value: petIDs
-
     struct Record {
         address owner; // owner of the pet
         uint petID;  // ID of the pet
@@ -17,19 +11,17 @@ contract Insurance {
         uint date; // date of the vaccination, or appointment
         string additionalInfo; // any additional information about this current record
     }
-    
+
+    address private owner;
+    int private petId; // make it into a map
+    uint[] pets; // pets of the owner
+
+    mapping(uint => Record) records; // tracks all the records of the pets of the owner
+    // key: dog 
+    // value: petIDs
+
 
     event OwnerSet(address indexed oldOwner, address indexed newOwner);
-
-    // Problem 1: 
-    // check pet and owner --> use map 
-
-    // TODO: pet and record (map)
-
-    // Problem 2: Function
-    // TODO: add pet (pet.appendToOwner)
-    //        change owner
-    //          add record 
 
     modifier isOwner() {
         require(msg.sender == owner, "Caller is not owner");
@@ -49,4 +41,20 @@ contract Insurance {
     function getOwner() external view returns (address) {
         return owner;
     }
+
+    // Problem 1: 
+    // check pet and owner --> use map 
+
+    // TODO: pet and record (map)
+
+
+    // Problem 2: Function
+    // TODO: add pet (pet.appendToOwner)
+    //        change owner
+    //          add record 
+
+    function addRecord(Record record) public view returns(address newContract) {  
+        // function body
+    }
+
 } 
