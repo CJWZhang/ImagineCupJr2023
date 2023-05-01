@@ -26,7 +26,7 @@ contract Insurance {
 
     
     address private owner; 
-    // is this contract owner or pet owner? --> This is the contract owner which I believe to be the pet owner, or the person calling the contract?
+
 
     mapping(address => Pet[]) public records; 
     // tracks all the records of the pets of the owner
@@ -58,18 +58,33 @@ contract Insurance {
 
 
     // add pet to current owner
-    function addToOwner(uint _petID) public  returns (address){
+    function addToOwner(uint _petID, string memory _name, string memory _breed, string memory _dob, string memory _gender, Record[] memory _petRecords) public  returns (address){
         // if(records[msg.sender][_petID].length != 0){
+        Pet memory p;
+        p.petID = _petID;
+        p.name = _name;
+        p.breed = _breed;
+
+        p.dob = _dob;
+        p.gender = _gender;
+
+        p.petRecords = _petRecords;
+
         if(records[msg.sender][_petID].petRecords.length != 0){
-            records[msg.sender][_petID];
+            records[msg.sender][_petID] = p;
         }
     }
 
     // change the owner of the pet to newOwner
     function changePetOwner(address newOwner, uint _petID) public  returns (address){
-        // Record[] storage currPetRecord = records[msg.sender][_petID];
-        Record[] storage currPetRecord = records[msg.sender][_petID].petRecords;
-        // 这里不对
+       // Record[] storage currPetRecord = records[msg.sender][_petID].petRecords; 
+
+
+        Pet storage p = records[msg.sender][_petID];
+        records[newOwner][_petID] = p;
+
+        delete records[msg.sender][_petID];
+        
         // records[newOwner][_petID] = currPetRecord;
         
     }
