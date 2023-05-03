@@ -1,5 +1,6 @@
 import java.util.*;
 import java.io.*;
+import java.awt.image.BufferedImage;
 
 public class smartContract {
 
@@ -23,16 +24,18 @@ public class smartContract {
 
     static class Pet{
         int petID; // RFID tag id
+        BufferedImage img; 
         String name;
         String breed;
-        String dob; // date of birth
+        int dob; // date of birth
         String gender;
 
-        Record[] petRecords; // records of the pet
+        ArrayList<Record> petRecords; // records of the pet
 
 
-        Pet(int petID, String name, String breed, String dob, String gender, Record[] petRecords){
+        Pet(int petID, BufferedImage img, String name, String breed, int dob, String gender, ArrayList<Record> petRecords){
             this.petID = petID;
+            this.img = img;
             this.name = name;
             this.breed = breed;
             this.dob = dob;
@@ -42,12 +45,19 @@ public class smartContract {
 
     }
 
-    HashMap<String, Pet[]> records = new HashMap<>();
+    HashMap<String, ArrayList<Pet>> records = new HashMap<>();
 
-    String ownerAdress = "";
+    String owner= "";
 
+    void addOwner(String own){ // add owner to map: own = owner 
+        records.put(own, new ArrayList<Pet>());
+    }
 
-    void addToOwner(){
+    // add pet to owner
+    void addToOwner(int _petID, BufferedImage _img, String _name, String _breed, int _dob, String _gender, ArrayList<Record> _petRecords){
+
+        Pet pet = new Pet(_petID, _img, _name, _breed, _dob, _gender, _petRecords);
+        records.get(owner).add(pet);
 
     }
 
@@ -59,12 +69,15 @@ public class smartContract {
 
     }
 
-    void removePet(){
-
+    void removePet(Pet p){ // remove this pet from owner
+        records.get(owner).remove(p);
     }
 
-    void removeRecord(){
-
+    void removeRecord(Record r, int _petID){
+        ArrayList<Record> pR = records.get(owner).get(_petID).petRecords;
+        //indexOf(r);
+        int index = pR.indexOf(r);
+        records.get(owner).get(_petID).petRecords.remove(index);
     }
 
 

@@ -752,3 +752,86 @@ INFO: Schema "PUBLIC" is up to date. No migration necessary.
 2023.05.01 15:36:44 WARN  no build tool detected in workspace '/Users/jwzhang/github/ImagineCupJr2023'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 2023.05.01 15:36:44 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
 2023.05.01 15:36:46 INFO  time: code lens generation in 2.07s
+2023.05.02 10:52:26 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:52:28 INFO  time: code lens generation in 1.91s
+May 02, 2023 10:52:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 35
+May 02, 2023 10:52:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 38
+2023.05.02 10:53:00 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:53:01 WARN  Running javac-semanticdb failed for file:///Users/jwzhang/github/ImagineCupJr2023/smartContract.java. Output:
+/Users/jwzhang/github/ImagineCupJr2023/smartContract.java:50: error: illegal start of type
+    void addToOwner(int _petID, String _name, String _breed, String dob, ){
+                                                                         ^
+1 error
+2023.05.02 10:53:46 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+May 02, 2023 10:53:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 339
+2023.05.02 10:54:07 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:54:09 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:54:11 INFO  time: code lens generation in 2.96s
+2023.05.02 10:54:11 INFO  time: code lens generation in 3.4s
+2023.05.02 10:55:04 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:55:06 INFO  time: code lens generation in 1.61s
+2023.05.02 10:55:21 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:55:21 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:56:09 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:56:10 WARN  Running javac-semanticdb failed for file:///Users/jwzhang/github/ImagineCupJr2023/smartContract.java. Output:
+/Users/jwzhang/github/ImagineCupJr2023/smartContract.java:50: error: ')' expected
+        records.add(own, new ArrayList<Pet>();)
+                                             ^
+/Users/jwzhang/github/ImagineCupJr2023/smartContract.java:50: error: illegal start of expression
+        records.add(own, new ArrayList<Pet>();)
+                                              ^
+2 errors
+2023.05.02 10:56:12 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:56:14 WARN  Using indexes to guess the definition of Pet
+May 02, 2023 10:56:15 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 786
+2023.05.02 10:56:19 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:56:22 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:56:27 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:56:33 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:56:35 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:56:38 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:56:56 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:57:05 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:57:06 INFO  time: code lens generation in 1.82s
+2023.05.02 10:57:09 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:57:11 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:57:13 INFO  time: code lens generation in 2.41s
+2023.05.02 10:57:19 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:57:19 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:57:38 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 10:57:55 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 11:00:15 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 11:00:17 INFO  time: code lens generation in 1.76s
+2023.05.02 11:00:41 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 11:00:41 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 11:01:00 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 11:01:13 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+May 02, 2023 11:01:15 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1678
+May 02, 2023 11:01:15 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1679
+2023.05.02 11:01:32 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 11:01:34 INFO  time: code lens generation in 1.76s
+2023.05.02 11:01:35 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 11:01:47 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 21:34:43 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 21:35:22 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 21:35:24 INFO  time: code lens generation in 1.69s
+2023.05.02 21:35:43 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 21:36:42 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 21:36:43 INFO  time: code lens generation in 1.61s
+2023.05.02 21:36:58 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+May 02, 2023 9:37:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2016
+2023.05.02 21:37:13 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 21:37:31 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+May 02, 2023 9:37:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2133
+May 02, 2023 9:37:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2169
+2023.05.02 21:37:48 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.02 21:42:04 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
