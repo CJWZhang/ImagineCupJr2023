@@ -43,27 +43,35 @@ public class smartContract {
 
     }
 
-    HashMap<String, ArrayList<Pet>> records = new HashMap<>();
+    HashMap<String, HashMap<Integer, Pet>> records = new HashMap<>();
+    /*
+     outer map: key is the owner, value is an inner mpa
+     inner map: key is petID, value is the pet
+     */
 
     String own = ""; //   address private owner; in Solidity 
 
     // add owner to the Map
     void addOwner(String owner){ 
-        records.put(owner, new ArrayList<Pet>());
+        records.put(owner, new HashMap<>());
     }
 
     // add pet to owner
     void addToOwner(String owner, int _petID, BufferedImage _img, String _name, String _breed, int _dob, String _gender, ArrayList<Record> _petRecords){
 
         Pet pet = new Pet(_petID, _img, _name, _breed, _dob, _gender, _petRecords);
-        records.get(owner).add(pet);
+        records.get(owner).put(_petID, pet);
 
     }
 
     // TODO: move the pet from oldOwner to newOwner
     void changePetOwner(String oldOwner, String newOwner, int petID){
-        ArrayList<Pet> petsOfOldOwner = records.get(oldOwner);
+        HashMap<Integer, Pet> petsOfOldOwner = records.get(oldOwner);
+        
+        Pet pet =  petsOfOldOwner.get(petID);
+        petsOfOldOwner.remove(pet);
 
+        records.get(newOwner).put(petID, pet);
 
     }
 
