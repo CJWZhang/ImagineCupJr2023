@@ -4,15 +4,13 @@ import java.awt.image.BufferedImage;
 
 public class smartContract {
 
-    static class Record {
-        int num; // the numbering of the record 
+    static class Record { 
         int petID;  // ID of the pet
         String recordType; // is it a vaccination, vet's appointment, etc? 
         int date; // date of the vaccination, or appointment
         String additionalInfo; // any additional information about this current record
 
-        Record(int num, int petID, String recordType, int date, String additionalInfo){
-            this.num = num;
+        Record(int petID, String recordType, int date, String additionalInfo){
             this.petID = petID;
             this.recordType = recordType;
             this.date = date;
@@ -47,33 +45,44 @@ public class smartContract {
 
     HashMap<String, ArrayList<Pet>> records = new HashMap<>();
 
-    String owner= "";
+    String own = ""; //   address private owner; in Solidity 
 
-    void addOwner(String own){ // add owner to map: own = owner 
-        records.put(own, new ArrayList<Pet>());
+    // add owner to the Map
+    void addOwner(String owner){ 
+        records.put(owner, new ArrayList<Pet>());
     }
 
     // add pet to owner
-    void addToOwner(int _petID, BufferedImage _img, String _name, String _breed, int _dob, String _gender, ArrayList<Record> _petRecords){
+    void addToOwner(String owner, int _petID, BufferedImage _img, String _name, String _breed, int _dob, String _gender, ArrayList<Record> _petRecords){
 
         Pet pet = new Pet(_petID, _img, _name, _breed, _dob, _gender, _petRecords);
         records.get(owner).add(pet);
 
     }
 
-    void changePetOwner(){
+    // TODO: move the pet from oldOwner to newOwner
+    void changePetOwner(String oldOwner, String newOwner, int petID){
+        ArrayList<Pet> petsOfOldOwner = records.get(oldOwner);
+
 
     }
 
-    void addRecord(){
+    // add new record to dog of petID
+    void addRecord(String owner, int _petID, int _num, String _recordType, int _date, String _additionalInfo){
+
+        ArrayList<Record> pR = records.get(owner).get(_petID).petRecords;
+        Record r = new Record(_petID, _recordType, _date, _additionalInfo);
+        pR.add(r); // add the record to the record array
 
     }
 
-    void removePet(Pet p){ // remove this pet from owner
+    // remove pet from owner
+    void removePet(String owner, Pet p){ 
         records.get(owner).remove(p);
     }
 
-    void removeRecord(Record r, int _petID){
+    // remove a record from records
+    void removeRecord(String owner, Record r, int _petID){
         ArrayList<Record> pR = records.get(owner).get(_petID).petRecords;
         //indexOf(r);
         int index = pR.indexOf(r);

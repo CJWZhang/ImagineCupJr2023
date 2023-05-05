@@ -2,70 +2,75 @@
 <html>
 <head>
 	<title>Insurance Contract</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			font-size: 14px;
-			line-height: 1.5;
-		}
-		
-		h1, h2 {
-			text-align: center;
-		}
-		
-		.section {
-			margin-top: 20px;
-			margin-bottom: 20px;
-		}
-		
-		.section-header {
-			font-weight: bold;
-			font-size: 16px;
-			margin-bottom: 10px;
-		}
-		
-		.signature {
-			margin-top: 40px;
-			text-align: center;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
-<body>
-	<h1>Contract</h1>
-	
-	<section class="section">
-		<h2 class="section-header">Parties</h2>
-		<p>This contract is entered into between [PARTY A NAME] ("Party A") and [PARTY B NAME] ("Party B").</p>
-	</section>
-	
-	<section class="section">
-		<h2 class="section-header">Purpose</h2>
-		<p>The purpose of this contract is to establish the terms and conditions of [PURPOSE OF THE CONTRACT].</p>
-	</section>
-	
-	<section class="section">
-		<h2 class="section-header">Terms</h2>
-		<p>The terms of this contract are as follows:</p>
-		<ol>
-			<li>[TERM 1]</li>
-			<li>[TERM 2]</li>
-			<li>[TERM 3]</li>
-			<li>[TERM 4]</li>
-		</ol>
-	</section>
-	
-	<section class="section">
-		<h2 class="section-header">Payment</h2>
-		<p>Party A shall pay Party B [AMOUNT] for the services rendered in accordance with the terms of this contract.</p>
-	</section>
-	
-	<section class="signature">
-		<p>_______________________________</p>
-		<p>[PARTY A NAME]</p>
-		<p>_______________________________</p>
-		<p>[PARTY B NAME]</p>
-	</section>
 
+
+<body>
+
+
+		<h1>Insurance Contract</h1>
+		<form>
+			<h2>Pet Information</h2>
+
+			<p id="petID"></p>
+			<p id="dob"></p>
+			<p id="gender"></p>
+
+			<h2>Insurance Information</h2>
+			<label for="policy">Policy Type:</label>
+			<select id="policy" name="policy" required>
+				<option value="">Select Policy Type</option>
+				<option value="life">Life Insurance</option>
+				<option value="health">Health Insurance</option>
+				<option value="auto">Auto Insurance</option>
+			</select>
+
+			<br>
+
+			<label for="amount">Coverage Amount:</label>
+			<input type="number" id="amountInsurance" name="amount" min="0" required>
+			
+			<label for="duration">Coverage Duration:</label>
+			<input type="number" id="duration" name="duration" min="1" required>
+			
+			<p id="amountA"></p>
+			<br>
+
+	<div class="container">
+			<h2>Terms and Conditions</h2>
+			<br>
+			<ul>
+				<li>Premium: The amount of money you pay to the insurance provider to obtain coverage.</li>
+				<li>Deductible: The amount of money you must pay out of pocket before the insurance provider will begin covering the costs of a claim.</li>
+				<li>Coverage limits: The maximum amount of money the insurance provider will pay for a claim. </li>
+				<li>Premium: The amount of money you pay to the insurance provider to obtain coverage.</li>	
+				<li>Deductible: The amount of money you must pay out of pocket before the insurance provider will begin covering the costs of a claim. </li>
+				<li>Coverage limits: The maximum amount of money the insurance provider will pay for a claim. </li>
+				<li>Exclusions: Situations or circumstances that are not covered by the insurance policy.</li>	
+				<li>Claim process: The steps you must follow to file a claim, including deadlines and required documentation.</li>
+				<li>Renewal and cancellation: The terms and conditions for renewing or canceling the insurance policy.</li>
+				<li>Termination: The conditions under which the insurance policy may be terminated by either party.</li>
+				<li>Grace period: The amount of time after a missed payment during which the insurance policy will still be active.</li>
+				<li>Misrepresentation: A clause that states that any misrepresentation or false information provided by the policyholder can result in the policy being voided.</li>
+				<li></li>Arbitration: A clause that outlines the process for resolving disputes between the policyholder and the insurance provider.	
+			</ul>
+
+			<h3>Signature</h3>
+			<canvas id="signature-canvas" width="400vx" height="200vx" style="border: 1px solid black;"></canvas>
+			<button onclick="clearSignature()">Clear</button>
+			<button onclick="saveSignature()">Save</button>
+
+			
+			<input type="checkbox" id="agree" name="agree" required>
+			<label for="agree">I agree to the terms and conditions.</label>
+			
+			<button onclick="submitInsurance()">Submit</button>
+		</form>
+	</div>
+	
+	<script src="script.js"></script>
 	<a href="front.html">Return to Dog Page</a>
 </body>
 </html>
+

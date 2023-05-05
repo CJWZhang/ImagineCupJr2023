@@ -843,3 +843,58 @@ May 03, 2023 9:21:16 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notif
 INFO: Unsupported notification method: $/setTrace
 May 03, 2023 9:21:16 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2023.05.03 12:05:27 INFO  Shutting down server
+2023.05.03 12:05:27 INFO  shutting down Metals
+2023.05.03 12:05:27 INFO  Exiting server
+2023.05.04 09:18:50 INFO  Started: Metals version 0.11.12 in workspace '/Users/jwzhang/github/ImagineCupJr2023' for client Visual Studio Code 1.77.3.
+May 04, 2023 9:18:50 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+May 04, 2023 9:18:50 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+May 04, 2023 9:18:50 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+May 04, 2023 9:18:50 AM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/jwzhang/github/ImagineCupJr2023/.metals/metals (H2 2.1)
+May 04, 2023 9:18:50 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.040s)
+May 04, 2023 9:18:50 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+May 04, 2023 9:18:50 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.05.04 09:18:51 INFO  time: initialize in 0.94s
+2023.05.04 09:18:56 WARN  Build server is not auto-connectable.
+2023.05.04 09:18:56 WARN  no build tool detected in workspace '/Users/jwzhang/github/ImagineCupJr2023'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.05.04 09:19:51 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+May 04, 2023 9:19:52 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2023.05.04 09:19:53 INFO  time: code lens generation in 1.67s
+2023.05.04 09:20:39 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.04 09:23:40 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.04 09:23:52 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.04 10:21:19 INFO  Shutting down server
+2023.05.04 10:21:19 INFO  shutting down Metals
+2023.05.04 10:21:19 INFO  Exiting server
+2023.05.04 14:39:30 INFO  Started: Metals version 0.11.12 in workspace '/Users/jwzhang/github/ImagineCupJr2023' for client Visual Studio Code 1.77.3.
+May 04, 2023 2:39:30 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+May 04, 2023 2:39:30 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+May 04, 2023 2:39:30 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+May 04, 2023 2:39:30 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:/Users/jwzhang/github/ImagineCupJr2023/.metals/metals (H2 2.1)
+May 04, 2023 2:39:30 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.039s)
+May 04, 2023 2:39:31 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+May 04, 2023 2:39:31 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.05.04 14:39:31 INFO  time: initialize in 0.99s
+2023.05.04 14:39:38 WARN  Build server is not auto-connectable.
+2023.05.04 14:39:38 WARN  no build tool detected in workspace '/Users/jwzhang/github/ImagineCupJr2023'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.05.04 14:39:38 WARN  no build target for: /Users/jwzhang/github/ImagineCupJr2023/smartContract.java
+2023.05.04 14:39:41 INFO  time: code lens generation in 2.83s
+2023.05.04 14:39:41 INFO  time: code lens generation in 3.1s
+2023.05.04 14:41:03 INFO  Shutting down server
+2023.05.04 14:41:03 INFO  shutting down Metals
+2023.05.04 14:41:03 INFO  Exiting server
