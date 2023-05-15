@@ -34,6 +34,14 @@ contract Insurance {
     // value: array of their pets
 
 
+// addPet(address, petInfo(optionally has medical records))
+    // // change 通过address 找到对应的pet list， remove from oldowner, add to new owner
+    // void changePetOwner(String oldOwner, String newOwner, int petID){
+        // add petrecord;
+        // remove petrecord
+
+        
+
     event OwnerSet(address indexed oldOwner, address indexed newOwner);
 
     modifier isOwner() {

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Camera Scanner</title>
+  <style>
+    #video-preview {
+      width: 100%;
+      max-width: 600px;
+    }
+    #canvas-preview {
+      display: none;
+    }
+    #capture-btn {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <video id="video-preview" autoplay></video>
+  <canvas id="canvas-preview"></canvas>
+  <button id="capture-btn">Capture</button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const video = document.getElementById("video-preview");
+      const canvas = document.getElementById("canvas-preview");
+      const captureButton = document.getElementById("capture-btn");
+      let stream;
+      let imageCapture;
+
+      // Access the camera stream
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(mediaStream) {
+          stream = mediaStream;
+          video.srcObject = mediaStream;
+          video.onloadedmetadata = function() {
+            video.play();
+          };
+          const track = mediaStream.getVideoTracks()[0];
+          imageCapture = new ImageCapture(track);
+          captureButton.style.display = "block";
+        })
+        .catch(function(error) {
+          console.log("Camera access denied:", error);
+        });
+
+      // Capture image from video stream
+      captureButton.addEventListener("click", function() {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+        const imageUrl = canvas.toDataURL("image/png");
+        
+        // Create a link element with the captured image as the source
+        const link = document.createElement("a");
+        link.href = imageUrl;
+        link.download = "captured_image.png";
+        
+        // Simulate a click on the link to trigger the download
+        link.click();
+      });
+
+      // Stop camera access when leaving the page
+      window.addEventListener("beforeunload", function() {
+        if (stream) {
+          stream.getTracks().forEach(function(track) {
+            track.stop();
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
